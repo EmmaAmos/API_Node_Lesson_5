@@ -1,16 +1,16 @@
-{
-   "user1":{
-    "name": "exampleName",
-    "in": "query",
-    "description": "Plain Jane went to Spain",
-    "required": true,
-    "type": "string"    
-   },
-   "user2":{
-    "name": "exampleUser",
-    "in": "query",
-    "description": "Plain Jane went to Spain to get away from Mane",
-    "required": true,
-    "type": "string"     
-   }
-}
+[
+    {
+    "profile":{
+        "experience":[],
+        "education":[],
+        "projects":[],
+        "skills":[],
+        "references":[]
+    },
+    "_id":{
+            "username":"exampleGirlName",
+            "password":"examplep@ssword1",
+            "profile":"object"
+        }
+    }
+]
