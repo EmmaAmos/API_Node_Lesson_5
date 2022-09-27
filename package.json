@@ -4,11 +4,7 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-<<<<<<< HEAD
     "test": "echo \"Error: no test specified\" && exit 1",
-=======
-    "test": "echo \"Error: no test specified\" && exit 1"
->>>>>>> 99768e23e72247a9bcac418b6580d2a5e7fe50db
     "start": "nodemon server.js",
     "lint": "eslint .",
     "lint:fix": "eslint --fix",
