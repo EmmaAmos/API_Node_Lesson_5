@@ -8,14 +8,14 @@
         "currentLocation": "4950 400S, Greenfield, IN 46140",
         "openToNewOpportunities": "false",
         "profileIsPublic": "true",
-        "theme_name":"Future Theme"
-   },
+        "theme_name":"Future Theme"        
+    },
 
     "profile": {
         "experience": ["Experience 1", "Experience2","Experience 3"],
         "education": ["highschool","kindergarden","collage"],
-        "projects": [],
+        "projects": ["cool project","personal project","work project"],
         "skills": ["skills", "skills", "skills"],
-        "references":[]  
+        "references":["teacher","parent","employer"]  
     }
 ]
