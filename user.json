@@ -1,23 +1,21 @@
 [
-    {
-        "profile":{
-            "experience":[],
-            "education":[],
-            "projects":[],
-            "skills":[],
-            "references":[]
-        },
-        "user":{
-            "id":"",
-            "username":"exampleGirlName",
-            "password":"examplep@ssword1",
-            "displayName": "exampleGirlName",
-            "email":"email@edu.com", 
-            "phoneNumber": "123-456-7891", 
-            "currentLocation": "4950 400S, Greenfield, IN 46140",
-            "openToNewOpportunities": "fale",
-            "profileIsPublic": "true",
-            "theme_name": "Future Theme"
-        }
+    "user": {
+        "username": "nick",
+        "password":"password", 
+        "displayName":"Nick", 
+        "email":"example@edu.com", 
+        "phoneNumber":"123-456-7891",
+        "currentLocation": "4950 400S, Greenfield, IN 46140",
+        "openToNewOpportunities": "false",
+        "profileIsPublic": "true",
+        "theme_name":"Future Theme"
+   },
+
+    "profile": {
+        "experience": ["Experience 1", "Experience2","Experience 3"],
+        "education": ["highschool","kindergarden","collage"],
+        "projects": [],
+        "skills": ["skills", "skills", "skills"],
+        "references":[]  
     }
 ]
