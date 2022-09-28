@@ -1,4 +1,4 @@
-[
+{
     "user": {
         "username": "nick",
         "password":"password", 
@@ -18,4 +18,4 @@
         "skills": ["skills", "skills", "skills"],
         "references":["teacher","parent","employer"]  
     }
-]
+}
