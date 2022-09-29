@@ -26,23 +26,6 @@ module.exports = (mongoose) => {
       },
       theme_name: {
         type: String
-      },
-      profile: {
-        experience: {
-          type: [mongoose.SchemaTypes.Mixed]
-        },
-        education: {
-          type: [mongoose.SchemaTypes.Mixed]
-        },
-        projects: {
-          type: [mongoose.SchemaTypes.Mixed]
-        },
-        skills: {
-          type: [String]
-        },
-        references: {
-          type: [mongoose.SchemaTypes.Mixed]
-        }
       }
     });
   
