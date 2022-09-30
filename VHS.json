@@ -1,0 +1,30 @@
+{
+    
+        "vhs": {
+            "videoName":"Chirstmas Day",
+            "description":"the frist Christmas",
+            "rating":"PG",
+            "tapeCondition":"fair",
+            "price":19.25,
+            "content_warning":"none",
+            "used": "false"
+        },
+        "vhs": {
+            "videoName":"VegieTales",
+            "description":"Best movie ever",
+            "rating":"PG",
+            "tapeCondition":"good",
+            "price":20.00,
+            "content_warning":"none",
+            "used": "false"
+        },
+        "vhs": {
+            "videoName":"Lego City Collection",
+            "description":"A collection of LEgo City adds",
+            "rating":"PG",
+            "tapeCondition":"good",
+            "price":16.99,
+            "content_warning":"none",
+            "used": "true"
+        }
+}

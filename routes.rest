@@ -1,0 +1,81 @@
+GET http://localhost:8080/vhs
+
+###
+
+GET http://localhost:8080/vhs/6336333581bded7a248b563b
+
+###
+POST http://localhost:8080/vhs HTTP/1.1
+content-type: application/json
+
+{
+  "videoName": "Home Alone",
+  "description": "A kid home alone for Christmas",
+  "rating": "PG",
+  "tapeCondition": "good",
+  "price": 18.25,
+  "content_warning": "none",
+  "used": "true"
+}
+
+###
+
+PUT http://localhost:8080/vhs/633638049f52a1525f91be03 HTTP/1.1
+content-type: application/json
+
+{
+  "videoName": "Home Alone",
+  "description": "A kid home alone for Christmas",
+  "rating": "PG",
+  "tapeCondition": "fair",
+  "price": 10.25,
+  "content_warning": "none",
+  "used": "true"
+}
+
+###
+
+DELETE http://localhost:8080/vhs/633638049f52a1525f91be03
+
+###
+
+GET http://localhost:8080/books
+
+###
+
+GET http://localhost:8080/books/63363b9681bded7a248b5642
+
+###
+POST http://localhost:8080/books HTTP/1.1
+content-type: application/json
+
+{
+  "author": "Jane Austin",
+  "country": "England",
+  "imageLink": "images/pride_prejudice.jpg",
+  "language": "English",
+  "link": "https://en.wikipedia.org/wiki/Pride_Prejudice\n",
+  "pages": 1024,
+  "title": "Pride Prejudice",
+  "year": 1658
+}
+
+###
+
+PUT http://localhost:8080/books/63364029db77d2e8353e982a HTTP/1.1
+content-type: application/json
+
+{
+  "author": "Jane Austin",
+  "country": "UK",
+  "imageLink": "images/pride_prejudice.jpg",
+  "language": "English",
+  "link": "https://en.wikipedia.org/wiki/Pride_Prejudice\n",
+  "pages": 1500,
+  "title": "Pride Prejudice",
+  "year": 1258
+}
+
+###
+
+DELETE http://localhost:8080/books/6336404cdb77d2e8353e982b

@@ -1,0 +1,354 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "description": "This is an api server for a portfolio builder website.\n",
+        "version": "1.0.0",
+        "title": "Portfolio Builder",
+        "contact": {
+            "email": "testuser@test.com"
+        }
+    },
+    "license": {
+        "name": "Apache 2.0",
+        "url": "http://www.apache.org/licenses/LICENSE-2.0.html"
+    },
+    "schemes": ["http"],
+    "paths": {
+        "/vhs": {
+            "get": {
+                "tags": ["vhs"],
+                "summary": "Get all vhs data",
+                "operationId": "getAll",
+                "produces": ["application/json"],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "schema": {
+                            "type": "Array"
+                        }
+                    },
+                    "404": {
+                        "description": "Error occurred"
+                    }
+                }
+            },
+            "post": {
+                "tags": ["vhs"],
+                "summary": "Create new vhs",
+                "description": "This is for when a vhs is created.",
+                "operationId": "createVHS",
+                "produces": ["application/json"],
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "Created vhs object",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/vhs"
+                        }
+                    }
+                ],
+                "responses": {
+                    "201": {
+                        "description": "successfully created vhs"
+                    },
+                    "400": {
+                        "description": "Invalid"
+                    }
+                }
+            }
+        },
+        "/vhs/{id}": {
+            "get": {
+                "tags": ["vhs"],
+                "summary": "Get vhs by id",
+                "operationId": "getSingle",
+                "produces": ["application/json"],
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "The id that needs to be fetched.",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation"
+                    },
+                    "400": {
+                        "description": "Invalid Id supplied"
+                    },
+                    "404": {
+                        "description": "Id not found"
+                    }
+                }
+            },
+            "put": {
+                "tags": ["vhs"],
+                "summary": "Update vhs",
+                "description": "This is for when a vhs is updated.",
+                "operationId": "updateVHS",
+                "produces": ["application/json"],
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "The id that needs to be updated.",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "Updated vhs object",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/vhs"
+                        }
+                    }
+                ],
+                "responses": {
+                    "201": {
+                        "description": "successfully updated vhs"
+                    },
+                    "400": {
+                        "description": "Invalid"
+                    }
+                }
+            },
+            "delete": {
+                "tags": ["vhs"],
+                "summary": "Remote vhs by id",
+                "operationId": "deleteVHS",
+                "produces": ["application/json"],
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "The id that needs to be removed.",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation"
+                    },
+                    "400": {
+                        "description": "Invalid Id supplied"
+                    },
+                    "404": {
+                        "description": "Id not found"
+                    }
+                }
+            }
+        },
+        "/books": {
+            "get": {
+                "tags": ["books"],
+                "summary": "Get all book data",
+                "operationId": "getAll",
+                "produces": ["application/json"],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "schema": {
+                            "type": "Array"
+                        }
+                    },
+                "404": {
+                    "description": "Error occurred"
+                }
+              }
+            },
+            "post": {
+                "tags": ["books"],
+                "summary": "Create new book",
+                "description": "This is for when a book is created.",
+                "operationId": "createBOOK",
+                "produces": ["application/json"],
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "Created book object",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/books"
+                        }
+                    }
+                ],
+                "responses": {
+                    "201": {
+                        "description": "successfully created book"
+                    },
+                    "400": {
+                        "description": "Invalid"
+                    }
+                }
+            }
+        },
+        "/books/{id}": {
+            "get": {
+                "tags": ["books"],
+                "summary": "Get book by id",
+                "operationId": "getSingle",
+                "produces": ["application/json"],
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "The id that needs to be fetched.",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation"
+                    },
+                    "400": {
+                        "description": "Invalid Id supplied"
+                    },
+                    "404": {
+                        "description": "Id not found"
+                    }
+                }
+            },
+            "put": {
+                "tags": ["books"],
+                "summary": "Update book",
+                "description": "This is for when a book is updated.",
+                "operationId": "updateBOOK",
+                "produces": ["application/json"],
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "The id that needs to be updated.",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "Updated book object",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/books"
+                        }
+                    }
+                ],
+                "responses": {
+                    "201": {
+                        "description": "successfully updated book"
+                    },
+                    "400": {
+                        "description": "Invalid"
+                    }
+                }
+            },
+            "delete": {
+                "tags": ["books"],
+                "summary": "Remote book by id",
+                "operationId": "deleteBOOK",
+                "produces": ["application/json"],
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "The id that needs to be removed.",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation"
+                    },
+                    "400": {
+                        "description": "Invalid Id supplied"
+                    },
+                    "404": {
+                        "description": "Id not found"
+                    }
+                }
+            }
+        }
+    },
+    "definitions": {
+        "vhs": {
+            "type": "object",
+            "required": ["videoName",
+                "description",
+                "rating",
+                "tapeCondition",
+                "price",
+                "content_warning",
+                "used"],
+            "properties": {
+                "videoName": {
+                    "type": "string"
+                },
+                "description":{
+                    "type": "string"
+                },
+                "rating":{
+                    "type": "string"
+                },
+                "tapeCondition":{
+                    "type": "string"
+                },
+                "price":{
+                    "type": "number"
+                },
+                "content_warning":{
+                    "type": "string"
+                },
+                "used":{
+                    "type": "string"
+                }
+            }
+        },
+        "books": {
+            "type": "object",
+            "required": ["author",
+                "country",
+                "imageLink",
+                "language",
+                "link",
+                "pages",
+                "title",
+                "year"],
+            "properties": {
+                "author": {
+                    "type": "string"
+                },
+                "country":{
+                    "type": "string"
+                },
+                "imageLink":{
+                    "type": "string"
+                },
+                "language":{
+                    "type": "string"
+                },
+                "link":{
+                    "type": "number"
+                },
+                "pages":{
+                    "type": "number"
+                },
+                "title":{
+                    "type": "string"
+                },
+                "year":{
+                    "type": "number"
+                }
+            }
+        }
+    }
+}
